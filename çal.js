@@ -32,5 +32,5 @@ const commandFiles = readdirSync(join(__dirname, "komutlar")).filter(file => fil
 
 for (const file of commandFiles) {
     const command = require(join(__dirname, "komutlar", `${file}`));
-    client.commands.set(command.kod, command, module.exports.run, exports.conf, exports.help);
+    client.commands.set(command.kod, command);
 }
